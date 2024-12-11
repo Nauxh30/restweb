@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+    height:100vh;
+}
+
+section nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    position:fixed;
+    right:0;
+    left:0;
+    background-color:brown;
+    background:url("C:\Users\naush\OneDrive\Desktop\fl1.jpg");
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+section nav .logo img{
+    width:100px;
+    cursor:pointer;
+    margin:7px 0;
+}
+
+section nav ul{
+    list-style:none;
+}
+
+section nav ul li{
+    display:inline-block;
+    margin:0 15px;
+
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    outline:none;
+    color:rgb(235, 177, 101);
+    cursor:pointer;
+    position:relative;
+    z-index:0;
+    border-radius:12px;
+    font-family:Arial, Helvetica, sans-serif
+    transition:0.1s;
+}
+
+.btn::after{
+    content:"";
+    z-index:-1;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgb(29, 0, 0);
+    left:0;
+    top:0;
+    border-radius: 10px;
+    display: block;
+    transition: 0.2 linear;
+}
+
+.btn:hover::after{
+    width:100%;
+}
+
+.btn:hover{
+    color:rgb(214, 142, 54);
+}
+
+section .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top:115px;
+    padding:0 10px 30px 10px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-gap:20px 40px;
+}
+section .menu .heading{
+    color:brown;
+    margin: bottom 30px;
+    padding:30px 0;
+    grid-column:1/-1;
+    text-align:center;
+}
+section .menu .food-items{
+    display:grid;
+    position:relative;
+    grid-template-rows:auto 1fr;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    transition:.2s ease-in-out;
+}
+
+section .menu .food-items img{
+    position:relative;
+    width:100%;
+    height:280px;
+    border-radius:15px 15px 0 0;
+    cursor:pointer;
+
+}
+section .menu .heading h1{
+    grid-column:1/-1;
+    text-align:center
+}
+section .menu .food-items .details{
+    padding:20px 10px;
+    display:grid;
+    grid-template-rows:auto 1fr 50px;
+    grid-row-gap:15px;
+}
